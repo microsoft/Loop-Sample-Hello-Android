@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/sendTestSignalBtn"
+        android:text="Send test signal"
+        android:layout_centerHorizontal="true"
+        android:background="#208DED"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/checkBoxView"
+        android:src="@drawable/check"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test signal successfully received"
+        android:layout_marginTop="20dp"
+        android:textColor="#52C161"
+        android:textSize="20sp"
+        android:id="@+id/testCompletedView"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:layout_below="@+id/checkBoxView"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
