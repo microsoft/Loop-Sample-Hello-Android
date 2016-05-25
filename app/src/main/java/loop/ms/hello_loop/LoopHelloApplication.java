@@ -8,7 +8,7 @@ import ms.loop.loopsdk.core.ILoopSDKCallback;
 import ms.loop.loopsdk.core.LoopSDK;
 import ms.loop.loopsdk.util.LoopError;
 
-public class HelloLoopApplication extends Application implements ILoopSDKCallback {
+public class LoopHelloApplication extends Application implements ILoopSDKCallback {
     @Override
     public void onCreate() {
         super.onCreate();

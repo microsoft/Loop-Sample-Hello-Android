@@ -1,4 +1,4 @@
-package loop.ms.hello_loop;
+package loop.ms.loophello;
 
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(loop.ms.hello_loop.R.layout.activity_main);
+        setContentView(loop.ms.loophello.R.layout.activity_main);
 
         final ImageView checkboxImageView = (ImageView) findViewById(R.id.checkBoxView);;
         final TextView testCompletedView = (TextView) findViewById(R.id.testCompletedView);
