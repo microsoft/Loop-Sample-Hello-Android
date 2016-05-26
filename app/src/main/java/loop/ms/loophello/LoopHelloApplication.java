@@ -18,7 +18,7 @@ public class LoopHelloApplication extends Application implements ILoopSDKCallbac
         LoopSDK.initialize(this, appId, appToken);
     }
 
-    // called by the Loop SDK on successful initalization
+    // called by the Loop SDK on successful initialization
     @Override
     public void onInitialized() {
         Log.d("loop_sdk", "Successfully Initialized");
@@ -32,7 +32,7 @@ public class LoopHelloApplication extends Application implements ILoopSDKCallbac
 
     // called by the Loop SDK when initialization fails
     @Override
-    public void onInitializeFailed(LoopError loopError){
+    public void onInitializeFailed(LoopError loopError) {
         Log.d("loop_sdk", "Loop SDK failed: " + loopError.toString());
     }
 }
