@@ -33,14 +33,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "Error loading layout resources");
         }
 
-        /*if (!LoopSDK.isInitialized()) {
-            sendTestButton.setEnabled(false);
-            errorImageView.setVisibility(View.VISIBLE);
-
-            testCompletedView.setText("Error initializing Loop SDK");
-            testCompletedView.setVisibility(View.VISIBLE);
-        }*/
-
         Button startTestButton = (Button) findViewById(R.id.sendTestSignalBtn);
         if (startTestButton != null) {
             startTestButton.setOnClickListener( new View.OnClickListener() {
@@ -49,6 +41,16 @@ public class MainActivity extends AppCompatActivity {
                     checkboxImageView.setVisibility(View.INVISIBLE);
                     errorImageView.setVisibility(View.INVISIBLE);
                     testCompletedView.setVisibility(View.INVISIBLE);
+
+                    if (!LoopSDK.isInitialized()) {
+                        sendTestButton.setEnabled(false);
+                        errorImageView.setVisibility(View.VISIBLE);
+
+                        testCompletedView.setText("Error initializing Loop SDK");
+                        testCompletedView.setVisibility(View.VISIBLE);
+
+                        return;
+                    }
 
                     LoopSDK.sendTestSignal(new ILoopServiceCallback<Integer>() {
                         @Override
