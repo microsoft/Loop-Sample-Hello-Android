@@ -23,8 +23,9 @@ public class LoopHelloApplication extends Application implements ILoopSDKCallbac
         editor.apply();
 
         // initialize the Loop SDK. create an account to get your appId and appToken
-        String appId = "sdk-v2-sample-8f475be8";
-        String appToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6InNkay12Mi1zYW1wbGUtOGY0NzViZTgiLCJhcHBLZXkiOiI0NmM0MmRiYTAxOTI0MmUzYjA4YjI5NGRhODE4OGNlYyIsImFsbG93ZWRSb3V0ZXMiOlt7Im1ldGhvZCI6InBvc3QiLCJwYXRoIjoiL3YyLjAvYXBwL3Nkay12Mi1zYW1wbGUtOGY0NzViZTgvdXNlciJ9LHsibWV0aG9kIjoiZGVsZXRlIiwicGF0aCI6Ii92Mi4wL2FwcC9zZGstdjItc2FtcGxlLThmNDc1YmU4L3VzZXIifSx7Im1ldGhvZCI6InBvc3QiLCJwYXRoIjoiL3YyLjAvYXBwL3Nkay12Mi1zYW1wbGUtOGY0NzViZTgvbG9naW4ifSx7Im1ldGhvZCI6ImdldCIsInBhdGgiOiIvdjIuMC9hcHAvc2RrLXYyLXNhbXBsZS04ZjQ3NWJlOC91c2VyIn1dLCJpYXQiOjE0NjMxNzQyMzUsImlzcyI6Ikxvb3AgQXV0aCB2MiIsInN1YiI6InNkay12Mi1zYW1wbGUtOGY0NzViZTgifQ.AXnQdIxcr_XG6Ri8IRC4W4s7P70FGK8B2jHmGChLo8c";
+        String appId = "YOUR_APP_ID";
+        String appToken = "YOUR_APP_TOKEN";
+
         LoopSDK.initialize(this, appId, appToken);
     }
 

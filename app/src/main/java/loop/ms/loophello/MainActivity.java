@@ -114,16 +114,17 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
         }
     }
 
-    private void setupInitialUI(Boolean sdkInitialized) {
-        checkboxImageView.setVisibility(View.INVISIBLE);
-        errorImageView.setVisibility(View.INVISIBLE);
-        testCompletedView.setVisibility(View.INVISIBLE);
+    private void setupInitialUI(Boolean sdkSuccessfullyInitialized) {
+        sendTestButton.setEnabled(sdkSuccessfullyInitialized);
+        errorImageView.setVisibility(sdkSuccessfullyInitialized ? View.INVISIBLE : View.VISIBLE);
 
-        sendTestButton.setEnabled(sdkInitialized);
-        errorImageView.setVisibility(sdkInitialized ? View.INVISIBLE : View.VISIBLE);
+        if (!sdkSuccessfullyInitialized) {
+            String errorMessage = "Error initializing Loop SDK";
+            if (LoopSDK.appId == "YOUR_APP_ID" || LoopSDK.appToken == "YOUR_APP_TOKEN") {
+                errorMessage = "No App Id or Token.\nSee onCreate in LoopHelloApplication\nCreate an app at developer.dev.loop.ms";
+            }
 
-        if (!sdkInitialized) {
-            testCompletedView.setText("Error initializing Loop SDK");
+            testCompletedView.setText(errorMessage);
             testCompletedView.setVisibility(View.VISIBLE);
         }
     }
