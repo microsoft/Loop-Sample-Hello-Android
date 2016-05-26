@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         LoopSDK.registerSignalListener("myListener", "*", new ISignalListener() {
             @Override
             public void onSignal(final Signal signal) {
-                // onSignal triggers when a new signal is received
+                // once the signal is received, you will see a big green checkmark
                 runOnUiThread(new Runnable(){
                     @Override
                     public void run(){
@@ -62,6 +62,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
 }

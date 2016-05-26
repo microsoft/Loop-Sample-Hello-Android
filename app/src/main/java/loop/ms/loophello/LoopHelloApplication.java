@@ -3,6 +3,7 @@ package loop.ms.loophello;
 import android.app.Application;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import ms.loop.loopsdk.core.ILoopSDKCallback;
 import ms.loop.loopsdk.core.LoopSDK;
@@ -15,7 +16,16 @@ public class LoopHelloApplication extends Application implements ILoopSDKCallbac
         // initialize the Loop SDK. create an account to get your appId and appToken
         String appId = "YOUR_APP_ID";
         String appToken = "YOUR_APP_TOKEN";
+
+        // throws error if you haven't added your appId and appToken
+        if (appId.equals("YOUR_APP_ID")){
+            throw new RuntimeException("Error - No App Id. You need to update your appId. Create an app at developer.dev.loop.ms to get an appId and appToken");
+        } else if (appToken.equals("YOUR_APP_TOKEN")){
+            throw new RuntimeException("Error - No App Token. You need update your appToken. Create an app at developer.dev.loop.ms to get an appId and appToken.");
+        }
+
         LoopSDK.initialize(this, appId, appToken);
+
     }
 
     // called by the Loop SDK on successful initalization
