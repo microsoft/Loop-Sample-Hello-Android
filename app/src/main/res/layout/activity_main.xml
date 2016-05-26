@@ -29,10 +29,20 @@
         android:visibility="invisible"
         />
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/errorView"
+        android:src="@drawable/error"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test signal successfully received"
+        android:text="Test signal sent successfully"
         android:layout_marginTop="20dp"
         android:textColor="#52C161"
         android:textSize="20sp"
