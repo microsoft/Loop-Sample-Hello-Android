@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Test signal sent successfully"
         android:layout_marginTop="20dp"
-        android:textColor="#52C161"
+        android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         android:id="@+id/testCompletedView"
         android:textAlignment="center"

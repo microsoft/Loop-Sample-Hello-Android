@@ -1,6 +1,7 @@
 package loop.ms.loophello;
 
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 checkboxImageView.setVisibility(View.INVISIBLE);
                 errorImageView.setVisibility(View.INVISIBLE);
                 testCompletedView.setVisibility(View.INVISIBLE);
+                testCompletedView.setTextColor(Color.green(Color.GREEN));
 
                 LoopSDK.sendTestSignal(new ILoopServiceCallback<Integer>() {
                     @Override
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                                 errorImageView.setVisibility(View.VISIBLE);
 
                                 testCompletedView.setText(errorMessage);
+                                testCompletedView.setTextColor(Color.BLACK);
                                 testCompletedView.setVisibility(View.VISIBLE);
                             }
                         });
@@ -125,6 +128,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
             }
 
             testCompletedView.setText(errorMessage);
+            testCompletedView.setTextColor(Color.BLACK);
             testCompletedView.setVisibility(View.VISIBLE);
         }
     }
