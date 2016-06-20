@@ -2,7 +2,7 @@
 
 These instructions will get you a copy of a Loop sample app that will send a test signal to the Loop platform.
 
-  0. If you haven’t already, signup for a Loop account and create an app on the [Loop Developer Site](https://developer.dev.loop.ms)
+  0. If you haven’t already, signup for a Loop account and create an app on the [Loop Developer Site](https://www.loop.ms)
   0. Get the sample app
     0. Clone this sample app `git clone https://github.com/Microsoft/Loop-Sample-Hello-Android.git`
     0. Open it in Android Studio
@@ -13,7 +13,7 @@ These instructions will get you a copy of a Loop sample app that will send a tes
         String appToken = "YOUR_APP_TOKEN";
     ```
   0. Create test users in your user dashboard (user link in the left navigation)
-  0. Fill in the userId and deviceId in `LoopTestUserApplication.java OnCreate` with a test user's userId and deviceId obtained from the [Loop Developer Site](https://developer.dev.loop.ms)
+  0. Fill in the userId and deviceId in `LoopTestUserApplication.java OnCreate` with a test user's userId and deviceId obtained from the [Loop Developer Site](https://www.loop.ms)
 
     ```
         String userId = "YOUR_USER_ID";
