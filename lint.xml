@@ -1,0 +1,26 @@
+<lint>
+    <issue id="InvalidPackage">
+        <!-- due to an issue with okio, we need to exclude lint errors for it -->
+        <!-- http://stackoverflow.com/questions/35492259/lint-error-on-okio -->
+        <!-- https://github.com/square/okio/issues/58 -->
+        <ignore regexp=".*okio.*" />
+        
+        <!-- due to an issue with Apache Commons Math3, we need to exclude lint errors for it -->
+        <ignore regexp="org.apache.commons.math3.*" />
+    </issue>
+
+    <!-- Disable check for old api versions -->
+    <issue id="OldTargetApi" severity="ignore" />
+
+    <!-- Disable check for old versions of Gradle dependencies -->
+    <issue id="GradleDependency" severity="ignore" />
+
+    <!-- Disable check for 'center' attribute on API level 15 -->
+    <issue id="UnusedAttribute" severity="ignore" />
+
+    <!-- Disable check for drawable density -->
+    <issue id="IconLocation" severity="ignore" /> 
+
+    <!-- Disable check ImageView content description -->
+    <issue id="ContentDescription" severity="ignore" />
+</lint>
