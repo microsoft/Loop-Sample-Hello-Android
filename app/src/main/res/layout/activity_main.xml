@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/sendTestSignalBtn"
-        android:text="Send test signal"
+        android:text="@string/send_test_signal"
         android:layout_centerHorizontal="true"
         android:background="#208DED"
         android:textColor="#fff"
@@ -42,7 +42,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test signal sent successfully"
+        android:text="@string/test_signal_sent_successfully"
         android:layout_marginTop="20dp"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
