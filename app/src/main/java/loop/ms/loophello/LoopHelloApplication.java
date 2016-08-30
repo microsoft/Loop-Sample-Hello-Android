@@ -24,14 +24,13 @@ public class LoopHelloApplication extends Application implements ILoopSDKCallbac
         editor.putString(LOOP_SDK_STATE, "uninitialized");
         editor.apply();
 
-        // initialize the Loop SDK. create an account to get your appId and appToken
+        // create an account to get your appId and appToken
         String appId = "YOUR_APP_ID";
         String appToken = "YOUR_APP_TOKEN";
 
-        String userId = "YOUR_USER_ID";
-        String deviceId = "YOUR_DEVICE_ID";
-
-        LoopSDK.initialize(this, appId, appToken, userId, deviceId);
+        // initialize the Loop SDK with your appId and appToken
+        // the last param enables location analytics
+        LoopSDK.initialize(getApplicationContext(), appId, appToken, true);
     }
 
     // called by the Loop SDK on successful initialization
