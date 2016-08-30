@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 testCompletedView.setVisibility(View.INVISIBLE);
                 testCompletedView.setTextColor(Color.green(Color.GREEN));
 
-                LoopSDK.sendTestSignal(new ILoopServiceCallback<Integer>() {
+                LoopSDK.sendTestLocationSignal(new ILoopServiceCallback<Integer>() {
                     @Override
                     public void onSuccess(Integer signalsUploaded) {
                         Log.d(TAG, "sendTestSignal success statusCode: 201");
