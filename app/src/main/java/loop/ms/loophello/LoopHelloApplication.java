@@ -53,9 +53,7 @@ public class LoopHelloApplication extends Application implements ILoopSDKCallbac
     }
 
     @Override
-    public void onDebug(String output) {
-
-    }
+    public void onDebug(String output) {}
 
     // called by the Loop SDK when initialization fails
     @Override
