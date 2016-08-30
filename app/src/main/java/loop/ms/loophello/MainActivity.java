@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 LoopSDK.sendTestLocationSignal(new ILoopServiceCallback<Integer>() {
                     @Override
                     public void onSuccess(Integer signalsUploaded) {
-                        Log.d(TAG, "sendTestSignal success statusCode: 201");
+                        Log.d(TAG, "send location success statusCode: 201");
 
                         runOnUiThread(new Runnable() {
                             @Override

@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Loop Hello</string>
-    <string name="send_test_signal">Send test signal</string>
-    <string name="test_signal_sent_successfully">Test signal sent successfully</string>
+    <string name="send_test_signal">Send location signal</string>
+    <string name="test_signal_sent_successfully">Location signal sent successfully</string>
 </resources>
